@@ -186,7 +186,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../images/people-office.jpg");
+    url("../images/dark-bg_mob.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -195,6 +195,7 @@ img {
   padding: 72px 0;
   margin: 0 auto;
 }
+
 .hero-title {
   color: var(--WHITE);
   text-align: center;
@@ -427,9 +428,7 @@ img {
 
 /* Footer */
 .footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 72px;
+  display: block;
 }
 
 .footer-section {
@@ -443,6 +442,7 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 72px;
 }
 
 .footer-text {
@@ -475,6 +475,7 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
+  margin-bottom: 72px;
 }
 
 .social-text,
@@ -539,7 +540,7 @@ img {
   font-weight: 400;
   letter-spacing: 0.04em;
   padding-left: 16px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   background-color: transparent;
   border-radius: 4px;
@@ -613,7 +614,7 @@ img {
 
 .modal {
   position: absolute;
-  width: 408px;
+  width: 288px;
   min-height: 584px;
   top: 50%;
   left: 50%;
@@ -762,6 +763,7 @@ img {
 
 .modal-checkbox-label {
   color: var(--LIGHT-SLATE);
+  display: flex;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
@@ -788,7 +790,6 @@ img {
   fill: var(--CLOUD);
   border: none;
 }
-
 .privacy-link {
   color: var(--IRIS);
   font-size: 12px;
@@ -920,7 +921,19 @@ img {
   border-radius: 50%;
 }
 
+@media only screen and (resolution: 192dpi) {
+  .hero-inner {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/dark-bg_mob@2x.jpg");
+  }
+}
+
 /* Tablet screen */
+
 @media only screen and (max-width: 767.98px) {
   .nav-list {
     display: none;
@@ -930,9 +943,32 @@ img {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .hero-inner {
+    max-width: 768px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/dark-bg_tab.jpg");
+  }
+}
+
+@media only screen and (min-width: 768px) and (resolution: 192dpi) {
+  .hero-inner {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/dark-bg_tab@2x.jpg");
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
   .hero-inner {
     max-width: 768px;
@@ -965,6 +1001,10 @@ img {
   .our-portfolio-link {
     flex-basis: calc((100% - 24px) / 2);
   }
+  .our-portfolio-img {
+    width: 356px;
+    height: 300px;
+  }
   .header-nav {
     margin-right: 122px;
   }
@@ -980,8 +1020,11 @@ img {
     letter-spacing: 0.04em;
   }
   .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
     gap: 72px 24px;
-    margin: 0 auto;
+    padding-right: 108px;
+    padding-left: 108px;
   }
   .footer-logo {
     display: block;
@@ -1002,9 +1045,39 @@ img {
   .subscribe-label {
     display: block;
   }
+  .subscribe-input {
+    width: 264px;
+  }
+  .modal {
+    width: 408px;
+  }
 }
 
 /* Desktop screen */
+
+@media only screen and (min-width: 1158px) {
+  .hero-inner {
+    max-width: 1158px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/people-office.jpg");
+  }
+}
+
+@media only screen and (min-width: 1158px) and (resolution: 192dpi) {
+  .hero-inner {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/people-office@2x.jpg");
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -1050,6 +1123,10 @@ img {
   .our-portfolio-link {
     flex-basis: calc((100% - 48px) / 3);
     box-shadow: none;
+  }
+  .our-portfolio-img {
+    width: 360px;
+    height: 300px;
   }
   .footer-inner {
     margin-left: 0;
