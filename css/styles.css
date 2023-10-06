@@ -112,8 +112,7 @@ img {
 .address-list {
   display: flex;
   gap: 12px;
-  display: flex;
-  justify-content: center;
+  justify-content: end;
   flex-wrap: wrap;
   align-items: center;
   margin-left: auto;
@@ -606,12 +605,6 @@ img {
   pointer-events: auto;
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
 .modal {
   position: absolute;
   width: 288px;
@@ -772,6 +765,7 @@ img {
 
 .custom-checkbox {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   fill: transparent;
@@ -902,7 +896,7 @@ img {
 
 .mobile-list-icons {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   gap: 40px;
 }
 
@@ -952,6 +946,12 @@ img {
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/dark-bg_tab.jpg");
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1156.98px) {
+  .footer-section .container {
+    max-width: 584px;
   }
 }
 
@@ -1023,14 +1023,14 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 72px 24px;
-    padding-right: 108px;
-    padding-left: 108px;
   }
   .footer-logo {
     display: block;
+    margin-bottom: 0;
   }
   .social-container {
     display: block;
+    margin-bottom: 0;
   }
   .social-text,
   .subscribe-text {
@@ -1050,6 +1050,9 @@ img {
   }
   .modal {
     width: 408px;
+  }
+  .menu-container {
+    display: none;
   }
 }
 
@@ -1083,6 +1086,22 @@ img {
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .section {
+    padding: 120px 0;
+  }
+
+  .address-list {
+    gap: 40px;
+  }
+  .address-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+  .header-nav {
+    margin-right: 0;
   }
   .hero-inner {
     max-width: 1440px;
